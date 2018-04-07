@@ -1,0 +1,63 @@
+<scene>
+
+  <image>
+    300 300
+  </image>
+
+  <sampler type="JitteredSampler">
+    <numSamplesU>10</numSamplesU>
+    <numSamplesV>10</numSamplesV>
+  </sampler>
+
+  <!--
+  <renderer type="DirectOnlyRenderer">
+    <directIlluminator type="MultipleIlluminator">
+        <WeightingFunc type="BalanceHeuristic"/>
+    </directIlluminator>    
+  </renderer>
+  <renderer type="MIPathTracer">
+    <depthLimit>5</depthLimit>
+    <backgroundIllumination>1</backgroundIllumination>
+    <WeightingFunc type="BalanceHeuristic"/>
+  </renderer>
+  <renderer type="DirectOnlyRenderer">
+    <directIlluminator type="LuminairesIlluminator" />
+  </renderer>
+  <renderer type="BruteForcePathTracer">
+    <depthLimit>5</depthLimit>
+    <backgroundIllumination>1</backgroundIllumination>
+    <directIlluminator type="LuminairesIlluminator" />
+  </renderer>
+  <renderer type="MIPathTracer">
+    <depthLimit>5</depthLimit>
+    <backgroundIllumination>1</backgroundIllumination>
+    <WeightingFunc type="BalanceHeuristic"/>
+  </renderer>
+  -->
+  <!--
+  <renderer type="KajiyaPathTracer">
+    <depthLimit>5</depthLimit>
+    <backgroundIllumination>1</backgroundIllumination>
+    <directIlluminator type="LuminairesIlluminator" />
+  </renderer>
+  -->
+  <renderer type="AmbientOcclusion">
+    <length>0.2</length>
+  </renderer>
+
+  <camera>
+    <eye>0 0 0</eye>
+    <target>0 0 100</target>
+    <up>0 1 0</up>
+    <yFOV>40</yFOV>
+  </camera>
+
+    <surface type="Sphere">
+    <material type="LambertianEmitter">
+      <radiance>60 60 60</radiance>
+    </material>
+    <center>0 0 50</center>
+    <radius>2</radius>
+  </surface>
+
+</scene>

@@ -1,0 +1,129 @@
+<scene>
+  <image>
+    800 600
+  </image>
+
+  <sampler type="JitteredSampler">
+    <numSamplesU>200</numSamplesU>
+    <numSamplesV>200</numSamplesV>
+  </sampler>
+
+  <renderer type="DirectOnlyRenderer">
+    <!--directIlluminator type="BRDFIlluminator"/-->
+    <!--directIlluminator type="LuminairesIlluminator" /-->
+    <!--directIlluminator type="MultipleIlluminator">
+      <WeightingFunc type="BalanceHeuristic"/>
+    </directIlluminator-->
+  </renderer>
+
+  <camera>
+    <eye>-1 5 -5</eye>
+    <target>1.5 0 -2</target>
+    <up>0 1 0</up>
+    <yFOV>40</yFOV>
+  </camera>
+
+  <material name="red" type="Homogeneous">
+    <brdf type="Lambertian">
+      <reflectance>0.8 0.3 0.1</reflectance>
+    </brdf>
+  </material>
+  <material name="green" type="Homogeneous">
+    <brdf type="Lambertian">
+      <reflectance>0.2 0.8 0.3</reflectance>
+    </brdf>
+  </material>
+  <material name="blue" type="Homogeneous">
+    <brdf type="Lambertian">
+      <reflectance>0.2 0.4 0.8</reflectance>
+    </brdf>
+  </material>
+  <material name="grey" type="Homogeneous">
+    <brdf type="Lambertian">
+      <reflectance>0.4 0.4 0.4</reflectance>
+    </brdf>
+  </material>
+  <material name="white" type="Homogeneous">
+    <brdf type="Lambertian">
+      <reflectance>0.8 0.8 0.8</reflectance>
+    </brdf>
+  </material>
+
+  <background type="Uniform">
+    <radiance>0.0 0.0 0.0</radiance>
+  </background>
+  
+  <surface type="Triangle">
+    <material type="LambertianEmitter">
+      <radiance>30 0.9 0.9</radiance>
+    </material>
+    <v0>0 2 -1</v0>
+    <v1>0 0.5 -1</v1>
+    <v2>1 0.5 -1</v2>
+  </surface>
+  <surface type="Triangle">
+    <material type="LambertianEmitter">
+      <radiance>30 0.9 0.9</radiance>
+    </material>
+    <v0>1 0.5 -1</v0>
+    <v1>0 2 -1</v1>
+    <v2>1 2 -1</v2>
+  </surface>
+  <surface type="Triangle">
+    <material type="LambertianEmitter">
+      <radiance>0.9 30 0.9</radiance>
+    </material>
+    <v0>1 2 -1</v0>
+    <v1>1 0.5 -1</v1>
+    <v2>2 0.5 -1</v2>
+  </surface>
+    <surface type="Triangle">
+    <material type="LambertianEmitter">
+      <radiance>0.9 30 0.9</radiance>
+    </material>
+    <v0>2 0.5 -1</v0>
+    <v1>1 2 -1</v1>
+    <v2>2 2 -1</v2>
+  </surface>
+    <surface type="Triangle">
+    <material type="LambertianEmitter">
+      <radiance>0.9 0.9 30</radiance>
+    </material>
+    <v0>2 2 -1</v0>
+    <v1>2 0.5 -1</v1>
+    <v2>3 0.5 -1</v2>
+  </surface>
+    <surface type="Triangle">
+    <material type="LambertianEmitter">
+      <radiance>0.9 0.9 30</radiance>
+    </material>
+    <v0>3 0.5 -1</v0>
+    <v1>2 2 -1</v1>
+    <v2>3 2 -1</v2>
+  </surface>
+
+   <surface type="Sphere">
+    <material ref="white" />
+    <radius>0.6</radius>
+    <center>2 0.6 -3</center>
+  </surface>
+  
+   <surface type="Triangle">
+    <material ref="white" />
+    <v0>20 0 20</v0>
+    <v1>-20 0 -20</v1>
+    <v2>-20 0 20</v2>
+  </surface>
+  
+   <surface type="Triangle">
+    <material ref="white" />
+    <v0>20 0 20</v0>
+    <v1>20 0 -20</v1>
+    <v2>-20 0 -20</v2>
+  </surface>
+  
+  
+  
+  
+
+</scene>

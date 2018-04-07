@@ -1,0 +1,137 @@
+<scene>
+  <image>
+    800 600
+  </image>
+
+  <sampler type="JitteredSampler">
+    <numSamplesU>130</numSamplesU>
+    <numSamplesV>130</numSamplesV>
+  </sampler>
+
+  <renderer type="DirectOnlyRenderer">
+    <!--directIlluminator type="BRDFIlluminator"/-->
+    <!--directIlluminator type="LuminairesIlluminator" /-->
+    <!--directIlluminator type="MultipleIlluminator">
+      <WeightingFunc type="BalanceHeuristic"/>
+    </directIlluminator-->
+  </renderer>
+
+  <camera>
+    <eye>40 -10 -22</eye>
+    <target>0 0 0</target>
+    <up>0 1 0</up>
+    <yFOV>70</yFOV>
+  </camera>
+
+  <material name="red" type="Homogeneous">
+    <brdf type="Lambertian">
+      <reflectance>0.9 0.1 0.1</reflectance>
+    </brdf>
+  </material>
+  <material name="green" type="Homogeneous">
+    <brdf type="Lambertian">
+      <reflectance>0.1 0.9 0.1</reflectance>
+    </brdf>
+  </material>
+  <material name="blue" type="Homogeneous">
+    <brdf type="Lambertian">
+      <reflectance>0.1 0.1 0.9</reflectance>
+    </brdf>
+  </material>
+  <material name="grey" type="Homogeneous">
+    <brdf type="Lambertian">
+      <reflectance>0.4 0.4 0.4</reflectance>
+    </brdf>
+  </material>
+  <material name="white" type="Homogeneous">
+    <brdf type="Lambertian">
+      <reflectance>0.9 0.9 0.9</reflectance>
+    </brdf>
+  </material>
+
+  <background type="Uniform">
+    <radiance>0.4 0.4 0.4</radiance>
+  </background>
+  
+  
+  <surface type="Sphere">
+    <material type="LambertianEmitter">
+      <radiance>140 140 140</radiance>
+    </material>
+    <radius>5</radius>
+    <center>5 20 5</center>
+  </surface>
+  
+
+
+     <surface type="Triangle">
+    <material ref="white" />
+    <v0>80 -22 80</v0>
+    <v1>-80 -22 -80</v1>
+    <v2>-80 -22 80</v2>
+  </surface>
+  
+   <surface type="Triangle">
+    <material ref="white" />
+    <v0>80 -22 80</v0>
+    <v1>80 -22 -80</v1>
+    <v2>-80 -22 -80</v2>
+  </surface>
+  
+       <surface type="Triangle">
+    <material ref="blue" />
+    <v0>-80 90 80</v0>
+    <v1>-80 90 -80</v1>
+    <v2>80 90 80</v2>
+  </surface>
+  
+   <surface type="Triangle">
+    <material ref="blue" />
+    <v0>80 90 -80</v0>
+    <v1>80 90 80</v1>
+    <v2>-80 90 -80</v2>
+  </surface>
+  
+
+  
+   <surface type="Triangle">
+    <material ref="red" />
+    <v0>-80 90 -80</v0>
+    <v1>-80 -22 80</v1>
+    <v2>-80 -22 -80</v2>
+  </surface>
+  
+    <surface type="Triangle">
+    <material ref="red" />
+    <v0>-80 90 -80</v0>
+    <v1>-80 90 80</v1>
+    <v2>-80 -22 80</v2>
+  </surface>
+  
+   <surface type="Triangle">
+    <material ref="green" />
+    <v0>-80 -22 80</v0>
+    <v1>-80 90 80</v1>
+    <v2>80 -22 80</v2>
+  </surface>
+  
+     <surface type="Triangle">
+    <material ref="green" />
+    <v0>80 90 80</v0>
+    <v1>80 -22 80</v1>
+    <v2>-80 90 80</v2>
+  </surface>
+  
+  
+  <surface type="Mesh">
+    <material ref="white" />
+    <data>teapot.msh</data>
+  </surface>
+  
+  
+  
+
+</scene>
+
+
+

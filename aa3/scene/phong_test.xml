@@ -1,0 +1,93 @@
+<scene>
+
+  <image>
+    560 560
+  </image>
+
+  <sampler type="JitteredSampler">
+    <numSamplesU>5</numSamplesU>
+    <numSamplesV>5</numSamplesV>
+  </sampler>
+
+  <renderer type="PhongShader">
+      <alpha>80.0</alpha>
+  </renderer>
+
+  <light type="PointLight">
+      <location>30. 0. 30</location>
+  </light>
+
+
+
+  <camera>
+    <eye>0 0 0</eye>
+    <target>0 0 100</target>
+    <up>0 1 0</up>
+    <yFOV>50</yFOV>
+  </camera>
+
+  <material name="white" type="Homogeneous">
+    <brdf type="Lambertian">
+      <reflectance>0.75 0.75 0.75</reflectance>
+    </brdf>
+  </material>
+  <material name="red" type="Homogeneous">
+    <brdf type="Lambertian">
+      <reflectance>0.6 0.05 0.05</reflectance>
+    </brdf>
+  </material>
+  <material name="green" type="Homogeneous">
+    <brdf type="Lambertian">
+      <reflectance>0.1 0.45 0.15</reflectance>
+    </brdf>
+  </material>
+  <material name="grey" type="Homogeneous">
+    <brdf type="Lambertian">
+      <reflectance>0.4 0.4 0.4</reflectance>
+    </brdf>
+  </material>
+
+  <material name="light" type="LambertianEmitter">
+    <brdf type="Lambertian">
+      <reflectance>0.78 0.78 0.78</reflectance>
+    </brdf>
+    <radiance>60 60 60</radiance>
+  </material>
+
+  <!--
+  <surface type="Mesh">
+    <material ref="white" />
+    <data>cbox-white.msh</data>
+  </surface>
+
+  <surface type="Mesh">
+    <material ref="light" />
+    <data>cbox-light.msh</data>
+  </surface>
+
+  <surface type="Mesh">
+    <material ref="green" />
+    <data>cbox-green.msh</data>
+  </surface>
+
+  <surface type="Mesh">
+    <material ref="red" />
+    <data>cbox-red.msh</data>
+  </surface>
+  -->
+  <surface type="Sphere">
+    <material ref="red" />
+    <center>0. -20. 60.</center>
+    <radius>12.</radius>
+  </surface>
+  <surface type="Sphere">
+    <material ref="green" />
+    <center>0. 20. 60.</center>
+    <radius>12.</radius>
+  </surface>
+
+  <background type="Uniform">
+    <radiance>0.0 0.0 0.0</radiance>
+  </background>
+
+</scene>
